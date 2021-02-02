@@ -427,6 +427,11 @@ footer {
 
 
 @media (max-width: 1025px) {
+  .icon:hover{
+    background: red;
+    color: white !important;
+    border-radius: 10px;
+  }
   .topnav{
     padding-top: 5%;
     width: 86%;
@@ -445,6 +450,7 @@ footer {
     margin-top: 5px;
     font-size: 6vmin;
     margin-right: 6%;
+    color: red;
   }
   main{
     position: relative;
