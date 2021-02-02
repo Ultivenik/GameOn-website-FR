@@ -52,6 +52,11 @@ img {
 .main-navbar{
   display: flex;
 }
+.main-navbar a:hover{
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+}
 .active{
   background: red;
   color: white !important;
