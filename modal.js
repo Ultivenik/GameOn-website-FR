@@ -102,11 +102,11 @@ function handleSubmit(e) {
   isRemoved()
 
   //messages d'erreur en cas d'invalidation du formulaire
-  if (input["first"].value.trim().length < 2 || input["first"].value.trim() === null) {
+  if (input["first"].value.trim().length < 2) {
     errorSpan("Veuillez entrer 2 caractères ou plus pour le champ prénom.", input["first"])
     validationError = true
   }
-  if (input["last"].value.trim().length < 2 || input["last"].value.trim() === null) {
+  if (input["last"].value.trim().length < 2) {
     errorSpan("Veuillez entrer 2 caractères ou plus pour le champ nom.", input["last"])
     validationError = true
   }
@@ -119,7 +119,7 @@ function handleSubmit(e) {
     validationError = true
   }
   if (input["birthdate"].value > "1998-12-31") {
-    errorSpan("Vous devez avoir 18 ans pour participer.", input["birthdate"])
+    errorSpan("Vous devez avoir 18 ans ou plus pour participer.", input["birthdate"])
     validationError = true
   }
   if (!input["birthdate"].value) {
