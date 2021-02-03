@@ -96,6 +96,7 @@ function handleSubmit(e) {
 
   let input = this
   let radio = document.querySelectorAll("input[name=location]:checked").length
+  var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   validationError = false
 
   //suppression du message d'erreur en cas de spam click
@@ -110,7 +111,7 @@ function handleSubmit(e) {
     errorSpan("Veuillez entrer 2 caractères ou plus pour le champ nom.", input["last"])
     validationError = true
   }
-  if (!input['email'].validity.valid) {
+  if (!input['email'].value.match(mailformat)) {
     errorSpan("Veuillez entrer une adresse email valide.", input["email"])
     validationError = true
   }
