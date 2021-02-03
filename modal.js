@@ -83,7 +83,6 @@ function launchModal() {
     confirmationMessage.remove()
   }
   closeModal(close)
-  closeModal(modalbg)
 }
 
 //ouverture de menu
