@@ -115,10 +115,6 @@ function handleSubmit(e) {
     errorSpan("Veuillez entrer une adresse email valide.", input["email"])
     validationError = true
   }
-  if (!input['email'].value) {
-    errorSpan("Veuillez remplir ce champ.", input["email"])
-    validationError = true
-  }
   if (input["birthdate"].value > "1998-12-31") {
     errorSpan("Vous devez avoir 18 ans ou plus pour participer.", input["birthdate"])
     validationError = true
