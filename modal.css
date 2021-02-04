@@ -545,10 +545,33 @@ footer {
 
 @media screen and (min-width: 500px) and (max-width:1024px){
   .hero-content .btn-signup{
-      right:41% !important;
+    right:41% !important;
   }
 }
-
+@media screen and (min-width:2000px){
+   .hero-content{
+     width: 50%;
+   }
+  .header-logo img{
+    width: 20em;
+  }
+  .topnav a{
+    font-size: 2em;
+    height: 2em;
+  }
+  .hero-headline{
+    font-size: 10em;
+    margin-left: .4em;
+  }
+  .hero-text{
+    font-size: 3em;
+    margin-left: 1em;
+  }
+  .btn-signup{
+    font-size: 3em;
+    margin-left: 1em;
+  }
+ }
 @keyframes modalopen {
   from {
     opacity: 0;

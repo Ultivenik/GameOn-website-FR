@@ -96,18 +96,19 @@ function handleSubmit(e) {
 
   let input = this
   let radio = document.querySelectorAll("input[name=location]:checked").length
-  var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  let mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  let noNumber = /^[A-Za-z]+$/
   validationError = false
 
   //suppression du message d'erreur en cas de spam click
   isRemoved()
 
   //messages d'erreur en cas d'invalidation du formulaire
-  if (input["first"].value.trim().length < 2) {
+  if (input["first"].value.trim().length < 2 || !input["first"].value.match(noNumber)) {
     errorSpan("Veuillez entrer 2 caractères ou plus pour le champ prénom.", input["first"])
     validationError = true
   }
-  if (input["last"].value.trim().length < 2) {
+  if (input["last"].value.trim().length < 2 || !input["last"].value.match(noNumber)) {
     errorSpan("Veuillez entrer 2 caractères ou plus pour le champ nom.", input["last"])
     validationError = true
   }
