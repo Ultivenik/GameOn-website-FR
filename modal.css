@@ -548,7 +548,7 @@ footer {
     right:41% !important;
   }
 }
-@media screen and (min-width:2000px){
+@media (min-width:2000px){
    .hero-content{
      width: 50%;
    }
