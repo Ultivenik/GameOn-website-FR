@@ -97,7 +97,7 @@ function handleSubmit(e) {
   let input = this
   let radio = document.querySelectorAll("input[name=location]:checked").length
   let mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  let noNumber = /^[a-zA-Z]*(-[a-zA-Z]*)?$/
+  let noNumber = /^[A-Za-z]+$/
   validationError = false
 
   //suppression du message d'erreur en cas de spam click
@@ -159,4 +159,3 @@ function handleSubmit(e) {
     document.querySelector("input[name=location]:checked").checked = false
   }
 }
-
