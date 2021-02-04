@@ -571,6 +571,9 @@ footer {
     font-size: 3em;
     margin-left: 1em;
   }
+  .copyrights{
+    font-size: 2em;
+  }
  }
 @keyframes modalopen {
   from {
